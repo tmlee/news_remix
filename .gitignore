@@ -2,3 +2,7 @@
 .bundle
 Gemfile.lock
 pkg/*
+
+lib/.DS_Store
+
+lib/news_remix/.DS_Store
