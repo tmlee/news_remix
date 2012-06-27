@@ -6,10 +6,10 @@ Gem::Specification.new do |s|
   s.name        = "news_remix"
   s.version     = NewsRemix::VERSION
   s.authors     = ["TM Lee"]
-  s.email       = ["TODO: Write your email address"]
+  s.email       = ["tm89lee@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Says.com News:Remix API wrapper for Ruby}
+  s.description = %q{Looking to access Says.com News:Remix story feed? This is a Ruby Wrapper for that.}
 
   s.rubyforge_project = "news_remix"
 
