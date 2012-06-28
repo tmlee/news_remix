@@ -1,11 +1,14 @@
 module NewsRemix
   	class Remix
 
-		ROOT_URL = "http://says.com/my/news"
-		CONTENT_TYPE = "application/json"
+  		attr_reader :root_url
+
+  		def initialize(args={})
+  			@root_url = "http://says.com/#{args[:country]}/news"
+  		end
 	
 		def get_featured_by_timestamp(args={})
-			api_url = ROOT_URL + "?filter=featured&from=#{args[:from]}&category_slug=#{args[:category_slug]}"
+			api_url = @root_url + "?filter=featured&from=#{args[:from]}&category_slug=#{args[:category_slug]}"
 			news_elements = []
 			call_curl(api_url).each {|payload| news_elements << NewsElement.new(payload) }
 			news_elements	
@@ -13,7 +16,7 @@ module NewsRemix
 		end
 	
 		def get_individual_news(args={})
-			api_url = ROOT_URL + "/#{args[:id]}"
+			api_url = @root_url + "/#{args[:id]}"
 			NewsElement.new( call_curl(api_url) )
 	
 			
