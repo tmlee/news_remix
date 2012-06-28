@@ -13,7 +13,7 @@ Add this line to your gemfile
 
 == Examples
 
-HeyzapPublisherApi currently supports
+NewsRemix currently supports
 	get_featured_by_timestamp
 	get_individual_news
 
