@@ -1,0 +1,32 @@
+= NewsRemix
+
+Unofficial Ruby Wrapper for Says.com NewsRemix
+
+== Installation
+
+Add this line to your gemfile
+
+  gem 'news_remix', :git => 'git@github.com:tmlee/news_remix.git'
+
+== Resources
+
+
+== Examples
+
+HeyzapPublisherApi currently supports
+	get_featured_by_timestamp
+	get_individual_news
+
+=== Initialize
+
+	# Initialize Remix with country
+	@remix = NewsRemix::Remix.new(:country => COUNTRY_CODE)
+
+=== Featured News
+
+	featured_news = @remix.get_featured_by_timestamp(:from => URI.escape(Time.now.to_s))	# Fetches latest featured news
+
+=== Individual News Item
+
+	news_item = @remix.get_individual_news(:id => NEWS_ID)	# Fetche info of individual news
+	
